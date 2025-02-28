@@ -1,175 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Study Permits</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    .banner-img {
-      width: 100%;
-      height: 200px;
-      object-fit: cover;
-      object-position: center;
-    }
-    
-    .heading-text {
-      font-size: 2.5rem;
-      font-weight: bold;
-    }
-    
-    .accent-text {
-      color: #8B0000;
-    }
-    
-    .info-box {
-      background-color: #FFEB3B;
-      border-radius: 5px;
-      padding: 20px;
-      height: 100%;
-      min-height: 200px;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-    }
-    
-    .info-icon {
-      font-size: 2rem;
-      margin-top: 15px;
-    }
-    
-    .red-section {
-      background-color: #8B0000;
-      color: white;
-      padding: 30px 0;
-    }
-    
-    .btn-custom {
-      background-color: #000;
-      color: white;
-      border: 1px solid white;
-      padding: 8px 15px;
-    }
-    
-    .btn-custom:hover {
-      background-color: #333;
-      color: white;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Canada Immigration Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
-  <!-- Header Banner -->
-  <div class="container-fluid p-0">
-    <img src="/api/placeholder/1200/200" alt="Graduation caps" class="banner-img">
-  </div>
-
-  <!-- Study Permits Section -->
-  <div class="container mt-4 mb-5">
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <h1 class="heading-text">Study<span class="accent-text">Permits</span></h1>
-      </div>
+    <div class="container mt-4">
+        <h2 class="text-center">Canada Immigration Assessment Form</h2>
+        <form>
+            <div class="mb-3">
+                <label class="form-label">Name</label>
+                <input type="text" class="form-control" name="name" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Email</label>
+                <input type="email" class="form-control" name="email" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Add Guests</label>
+                <input type="text" class="form-control" name="guests">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Nationality</label>
+                <input type="text" class="form-control" name="nationality" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Current Country of Residence</label>
+                <input type="text" class="form-control" name="residence" required>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Type of Matter</label>
+                <select class="form-control" name="matter" required>
+                    <option>Visitor Visa</option>
+                    <option>Study Permit</option>
+                    <option>Spousal Sponsorship</option>
+                    <option>Common Law Sponsorship</option>
+                    <option>Child Sponsorship</option>
+                    <option>Super Visa</option>
+                    <option>Express Entry / PR</option>
+                    <option>Inadmissibility</option>
+                    <option>Post-Graduate Work Permit</option>
+                    <option>Spousal Work Permit</option>
+                    <option>PFL / IRCC Letter</option>
+                    <option>Humanitarian & Compassionate PR</option>
+                    <option>Citizenship</option>
+                    <option>PR Card (Renewal)</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Have you been refused a Canadian visa before?</label><br>
+                <input type="radio" name="visa_refused" value="Yes"> Yes
+                <input type="radio" name="visa_refused" value="No"> No
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">If refused, provide the most recent date of refusal:</label>
+                <input type="date" class="form-control" name="refusal_date">
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Do you have any inadmissibility issues? (criminal conviction, misrepresentation, immigration bans, etc.)</label><br>
+                <input type="radio" name="inadmissibility" value="Yes"> Yes
+                <input type="radio" name="inadmissibility" value="No"> No
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Where did you hear about us?</label>
+                <select class="form-control" name="referral" required>
+                    <option>Friend or Family</option>
+                    <option>Tiktok</option>
+                    <option>Instagram</option>
+                    <option>Facebook</option>
+                    <option>YouTube</option>
+                    <option>Google</option>
+                    <option>Threads</option>
+                    <option>Other</option>
+                </select>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">If you would like, provide a brief overview of your situation:</label>
+                <textarea class="form-control" name="overview"></textarea>
+            </div>
+            
+            <div class="mb-3">
+                <label class="form-label">Send text messages to:</label>
+                <input type="tel" class="form-control" name="contact">
+            </div>
+            
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </form>
     </div>
     
-    <div class="row">
-      <div class="col-12">
-        <p>Over half a million students apply to study in Canada each year. It's no question that Canada's education system is top class and can set you up for a prosperous career. For many, it's also the first step in their immigration journey towards becoming a Permanent Resident of Canada.</p>
-        
-        <p>However, just because you obtained your Letter of Acceptance does not mean you are guaranteed a study permit. There are several requirements you must satisfy to be granted a study permit. Any mistakes in your application could result in a refusal and potentially delaying your future.</p>
-        
-        <div class="text-center mt-4">
-          <a href="#" class="btn btn-dark">Book a Consultation</a>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- What You Need Section -->
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-12 text-center mb-5">
-        <h2 class="heading-text">What You <span class="accent-text">Need To Show</span></h2>
-      </div>
-    </div>
-    
-    <div class="row row-cols-1 row-cols-md-3 g-4">
-      <div class="col mb-4">
-        <div class="info-box">
-          <h3>Letter of Acceptance</h3>
-          <p>You need to obtain a Letter of Acceptance from a Designated Learning Institution (DLI) before you can apply for a study permit.</p>
-          <div class="info-icon">✉️</div>
-        </div>
-      </div>
-      
-      <div class="col mb-4">
-        <div class="info-box">
-          <h3>Study Plan</h3>
-          <p>Explain why you decided to study in Canada and how it will advance your career goals back home. Be specific; clearer answers that demonstrate genuine intent to return home will not be grounds for refusal.</p>
-          <div class="info-icon">📝</div>
-        </div>
-      </div>
-      
-      <div class="col mb-4">
-        <div class="info-box">
-          <h3>Financial Support</h3>
-          <p>Demonstrate financial ability to pay for your first year tuition, living costs (around $10,000).</p>
-          <p>If you have a financial sponsor, make sure it is clearly communicated. Demonstrate your relationship to the sponsor and their ability to fund your education.</p>
-          <div class="info-icon">💲</div>
-        </div>
-      </div>
-      
-      <div class="col mb-4">
-        <div class="info-box">
-          <h3>Ties to Home</h3>
-          <p>Convince the immigration officer that you will leave Canada after graduation with strong reasons to return home.</p>
-          <div class="info-icon">🏠</div>
-        </div>
-      </div>
-      
-      <div class="col mb-4">
-        <div class="info-box">
-          <h3>Valid Passport</h3>
-          <p>Make sure your passport validity covers your entire stay in Canada.</p>
-          <div class="info-icon">🗂️</div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Refused Section -->
-  <div class="red-section">
-    <div class="container py-4">
-      <div class="row">
-        <div class="col-12 text-center">
-          <h2 class="heading-text text-white mb-4">Study Permit <span style="color: #FFEB3B;">Refused?</span></h2>
-          <p>Should I reapply or appeal?</p>
-          <p>Get your application reassessed by a lawyer to find out the best option.</p>
-          <div class="mt-4">
-            <a href="#" class="btn btn-custom">Book a Consultation</a>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- How We Can Help Section -->
-  <div class="container my-5">
-    <div class="row">
-      <div class="col-12 text-center mb-4">
-        <h2 class="heading-text">How We Can <span class="accent-text">Help</span></h2>
-      </div>
-    </div>
-    
-    <div class="row">
-      <div class="col-12">
-        <p>Paul is highly experienced with study permit applications from all walks of life. Whether you are a young student applying for your first bachelor's degree, or a mature student looking to further your career via an MBA degree.</p>
-        
-        <p>Paul understands what immigration officers are looking for. He will guide you through each step of the process to ensure you compile a strong and convincing application, giving you the highest chance of success.</p>
-      </div>
-    </div>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
