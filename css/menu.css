@@ -129,7 +129,7 @@ video {
 
 .wsmenu > .wsmenu-list > li > a {
   display: block;
-  color: #666;
+  color: #fff;
   font-family: 'Oxygen', sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -162,7 +162,7 @@ video {
 }
 
 .white-menu .wsmenu > .wsmenu-list > li > a {
-  color: #666;
+  color: #fff;
 }
 
 .tra-menu .wsmenu.dark-txt > .wsmenu-list > li > a {
@@ -865,7 +865,7 @@ video {
     text-align: left;
     border-right: solid 0px;
     background-color: transparent;
-    color: #666666;
+    color: #fff666;
     line-height: 25px;
     border-bottom: 1px solid;
     border-bottom-color: rgba(0, 0, 0, 0.13);
@@ -939,13 +939,13 @@ video {
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu > li >a:hover {
     background-color: #e7e7e7;
-    color: #666666;
+    color: #fff666;
     text-decoration: underline;
   }
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu li:hover>a {
     background-color: #e7e7e7;
-    color: #666666;
+    color: #fff666;
   }
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu {
@@ -994,7 +994,7 @@ video {
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li >a:hover {
     background-color: #e7e7e7;
-    color: #666666;
+    color: #fff666;
     text-decoration: underline;
   }
 
@@ -1050,7 +1050,7 @@ video {
 
   .wsmenu > .wsmenu-list > li > ul.sub-menu > li > ul.sub-menu > li > ul.sub-menu > li >a:hover {
     background-color: #e7e7e7;
-    color: #666666;
+    color: #fff666;
     text-decoration: underline;
   }
 
@@ -1060,7 +1060,7 @@ video {
 
   /* ================== Mobile Mega Menus CSS  ================== */
   .wsmenu > .wsmenu-list > li > .wsmegamenu {
-    color: #666666;
+    color: #fff666;
     display: none;
     position: relative;
     top: 0px;
@@ -1088,7 +1088,7 @@ video {
   }
 
   .wsmenu > .wsmenu-list > li > .wsmegamenu .title {
-    color: #666666;
+    color: #fff666;
     font-size: 15px;
     padding: 10px 8px 10px 0px;
   }
@@ -1105,7 +1105,7 @@ video {
     line-height: normal;
     font-size: 13px;
     background-color: #e7e7e7;
-    color: #666666;
+    color: #fff666;
   }
 
   .wsmenu > .wsmenu-list > li > .wsmegamenu> ul> li >a:hover {
@@ -1114,7 +1114,7 @@ video {
 
   .wsmenu > .wsmenu-list > li > .wsmegamenu ul li.title {
     line-height: 26px;
-    color: #666666;
+    color: #fff666;
     margin: 0px;
     font-size: 15px;
     padding: 7px 0px;
@@ -1153,8 +1153,8 @@ video {
     top: 0;
     left: 0;
     z-index: 10002;
-    height: 54px;
-    background-color: #eaecf0;
+    height: 80px;
+    background-color: #fff;
     text-align: center;
     -webkit-transition: all 0.25s ease-in-out;
     -moz-transition: all 0.25s ease-in-out;
@@ -1176,7 +1176,7 @@ video {
 
   .wsmobileheader .smllogo {
     display: inline-block;
-    margin-top: 12px;
+    margin-top: 15px;
   }
 
   /* Mobile Search Bar*/
@@ -1202,7 +1202,7 @@ video {
     top: 0px;
     transition: all 0.4s ease-in-out 0s;
     z-index: 102;
-    padding: 12px 14px;
+    padding: 30px 14px;
   }
 
   .callusbtn i {
@@ -1229,8 +1229,8 @@ video {
 
   .wsanimated-arrow {
     cursor: pointer;
-    padding: 16px 35px 16px 0px;
-    margin: 7px 0 0 15px;
+    padding: 30px 35px 16px 0px; /* Adjust first value (25px) as needed */
+    margin: 15px 0 0 15px; /* Adjust third value (10px) as needed */
   }
 
   .wsanimated-arrow span,
