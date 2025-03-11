@@ -68,6 +68,63 @@
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
 <style>
+      .custom-footer {
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
+  /* Default styles */
+  .custom-footer .footer-content {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    max-width: 1200px;
+    padding: 0 20px;
+  }
+  @media (max-width: 767px) {
+    .custom-footer .footer-content {
+      flex-direction: column;
+      padding: 0 20px;
+    }
+  
+    .custom-footer .footer-content > div {
+      margin: 15px 0;
+      text-align: center;
+    }
+    .hero-image-container {
+      height: auto;
+    }
+    .hero-image {
+      height: auto;
+    }
+    .header-space {
+    padding-top: 30px;
+  }
+  }
+  @media (min-width: 768px) {
+    .hero-image-container {
+      height: 100px;
+    }
+    .hero-image {
+      height: 100%;
+    }
+    .funny{
+        padding-top:10px;
+        margin-top:10px;
+    }
+  }
+    .blue-text {
+      color: #3986e0;
+    }
+    .black-text {
+      color: #000;
+    }
+    .link-blue {
+      color: #3986e0;
+      text-decoration: none;
+    }
+    .link-blue:hover {
+      text-decoration: underline;
+    }
   .formsbody{
     padding:2rem 10rem 2rem 10rem;
   }
@@ -634,19 +691,18 @@ Montreal, Quebec H2J 2L1, Canada</span>
       </section>
       <!-- END CALL TO ACTION-4 -->
 
-      <footer style="background-color: #f8f8f8; color: #333; padding: 2rem; text-align: center; font-size: 0.9rem;">
-        <div style="display: flex; justify-content: space-between; margin: 0 auto; max-width: 1200px; padding: 0 100px;">
+      <footer class="custom-footer" style="background-color: #f8f8f8; color: #333; padding: 2rem; text-align: center; font-size: 0.9rem;">
+        <div class="footer-content">
           <div style="flex: 1; margin: 0 15px; text-align: left;">
             <h3 style="margin-bottom: 1rem;">ABOUT</h3>
             Azurverde immigration  Services is a Quebec-based agency helping individuals & families successfully immigrate to, work & visit Canada<br>
             4388 Saint Denis St Suite 200 #808, Montreal, Quebec H2J 2L1, Canada
-            <a href="https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Licensee/Profile.aspx?ID=10930" target="_blank" rel="noreferrer noopener" style="padding-top:50px;">
-              <img src="./images/rcic.png" alt="Law Society of Ontario" style="width:160px;height:41px;object-fit:cover">
+            <a href="https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Licensee/Profile.aspx?ID=10930" target="_blank" rel="noreferrer noopener" style="padding-top: 2rem; display: block;">
+              <img src="images/rcic.png" alt="Law Society of Ontario" style="width:160px;height:41px;object-fit:cover">
             </a>
           </div>
-    
+      
           <div style="flex: 1; margin: 0 15px; text-align: left;">
-    
             <h3 style="margin-bottom: 1rem;">SERVICES</h3>
             <a href="./spousal-sponsorships.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Spousal Sponsorships</a>
             <a href="./studypermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Study Permit</a>
@@ -658,25 +714,23 @@ Montreal, Quebec H2J 2L1, Canada</span>
             <a href="./workpermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Work Permit</a>
             <a href="./expressentry.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Express Entry</a>
           </div>
-    
+      
           <div style="flex: 1; margin: 0 15px; text-align: left;">
             <h3 style="margin-bottom: 1rem;">KEEP IN TOUCH</h3>
             <div style="display: flex; gap: 1rem; margin-top: 1rem;">
               <a href="https://web.facebook.com/profile.php?id=61558892361459&mibextid=wwXIfr&rdid=BXeW1GmrbuYU9ncO&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F12G2EEp6x1n%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
-              <img src="./images/facebook-logosmall.png" alt="Facebook" style="width:40px;height:40px;object-fit:cover">
+                <img src="./images/facebook-logosmall.png" alt="Facebook" style="width:40px;height:40px;object-fit:cover">
               </a>
               <a href="https://www.instagram.com/christopherr_benderimmigration/?utm_source=qr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
                 <img src="https://static.wixstatic.com/media/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png" alt="Instagram" style="width:40px;height:40px;object-fit:cover">
               </a>
-              <a href="" target="_self" rel="noreferrer noopener" style="display: inline-block;">
-              <img src="./images/mail.png" alt="Email" style="width:40px;height:40px;object-fit:cover">
+              <a href="mailto:info@azurverdeimmigrationservices.com" target="_self" rel="noreferrer noopener" style="display: inline-block;">
+                <img src="./images/mail.png" alt="Email" style="width:40px;height:40px;object-fit:cover">
               </a>
-              <a href="" target="_self" rel="noreferrer noopener" style="display: inline-block;">
-                <img src="https://static.wixstatic.com/media/11062b_6fc54c8957474101ba6e80b01907ae50~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6fc54c8957474101ba6e80b01907ae50~mv2.png" alt="YouTube" style="width:40px;height:40px;object-fit:cover">
-              </a>
+    
             </div>
     
-          <a href="mailto:info@azurverdeimmigrationservices.com" style="color: #333; text-decoration: none; display: block; font-size: 1rem; margin-bottom: 5rem; margin-top:30px">info@azurverdeimmigrationservices.com</a>
+            <a href="mailto:info@azurverdeimmigrationservices.com" style="color: #333; text-decoration: none; display: block; font-size: 1rem; margin-bottom: 5rem; margin-top:30px">info@azurverdeimmigrationservices.com</a>
           </div>
         </div>
         <p style="margin-bottom: -20px;"> © Copyright Azurverde immigration  Consulting 2024. All Rights Reserved</p>
