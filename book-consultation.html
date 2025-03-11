@@ -73,9 +73,10 @@
      padding: 2rem 3rem 2rem 3rem;
   }
   }
-  .custom-footer{
-    padding:0px;
-  }
+  .custom-footer {
+      padding: 2rem 0;
+      margin-top: 4rem;
+    }
   /* Default styles */
   .custom-footer .footer-content {
     display: flex;
@@ -84,7 +85,51 @@
     max-width: 1200px;
     padding: 0 20px;
   }
+  @media (max-width: 767px) {
+    .custom-footer .footer-content {
+      flex-direction: column;
+      padding: 0 20px;
+    }
   
+    .custom-footer .footer-content > div {
+      margin: 15px 0;
+      text-align: center;
+    }
+    .hero-image-container {
+      height: auto;
+    }
+    .hero-image {
+      height: auto;
+    }
+    .header-space {
+    padding-top: 30px;
+  }
+  }
+  @media (min-width: 768px) {
+    .hero-image-container {
+      height: 100px;
+    }
+    .hero-image {
+      height: 100%;
+    }
+    .funny{
+        padding-top:10px;
+        margin-top:10px;
+    }
+  }
+    .blue-text {
+      color: #3986e0;
+    }
+    .black-text {
+      color: #000;
+    }
+    .link-blue {
+      color: #3986e0;
+      text-decoration: none;
+    }
+    .link-blue:hover {
+      text-decoration: underline;
+    }
   /* Media query for mobile devices */
   .formsbody{
     padding:2rem 10rem 2rem 10rem;
@@ -99,6 +144,42 @@
      padding:2rem 30px 2rem 30px;
     }
   }
+  .privacy-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
+
+.privacy-popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .privacy-popup-content {
+    margin: 30% auto;
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+#okButton {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 30px;
+}
   .privacy-popup {
   display: none;
   position: fixed;
@@ -390,11 +471,11 @@
     </div>
     <!-- End header-wrapper -->
     </header>
-    <div class="container mt-5 mb-5" style="padding: 2rem 10rem 2rem 10rem; background-color: #f8f8f8; border-radius: 30px;">
+    <div>
+      <div class=" formsbody container mt-2 mb-5" style=" background-color: #f8f8f8; border-radius: 30px;">
         <h2 class="text-center">Canada Immigration Assessment Form</h2>
-        <form  
-        action="https://formspree.io/f/mjkgnlkg"
-        method="POST" >
+        <form   action="https://formspree.io/f/mjkgnlkg"
+        method="POST">
             <div class="mb-3">
                 <label class="form-label">Name</label>
                 <input type="text" class="form-control" name="name" required>
@@ -456,66 +537,65 @@
                 <input type="radio" name="inadmissibility" value="Yes"> Yes
                 <input type="radio" name="inadmissibility" value="No"> No
             </div>
-
             <div class="mb-3">
-                <label class="form-label">Do you have any family members or relatives living in Canada and who are 18 years or older?</label><br>
-                <input type="radio" name="family_in_canada" value="Yes"> Yes
-                <input type="radio" name="family_in_canada" value="No"> No
-            </div>
+              <label class="form-label">Do you have any family members or relatives living in Canada and who are 18 years or older?</label><br>
+              <input type="radio" name="family_in_canada" value="Yes"> Yes
+              <input type="radio" name="family_in_canada" value="No"> No
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Your Personal Net Worth</label>
-                <input type="text" class="form-control" name="net_worth">
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Your Personal Net Worth</label>
+              <input type="text" class="form-control" name="net_worth">
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">You may provide additional information that you think would be relevant to your immigration assessment. Would you like to add information at this time?</label>
-                <textarea class="form-control" name="additional_info"></textarea>
-            </div>
+          <div class="mb-3">
+              <label class="form-label">You may provide additional information that you think would be relevant to your immigration assessment. Would you like to add information at this time?</label>
+              <textarea class="form-control" name="additional_info"></textarea>
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Did you own and manage any other business(es) during the last five years?</label><br>
-                <input type="radio" name="business_ownership" value="Yes"> Yes
-                <input type="radio" name="business_ownership" value="No"> No
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Did you own and manage any other business(es) during the last five years?</label><br>
+              <input type="radio" name="business_ownership" value="Yes"> Yes
+              <input type="radio" name="business_ownership" value="No"> No
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Do you have management experience?</label><br>
-                <input type="radio" name="management_experience" value="Yes"> Yes
-                <input type="radio" name="management_experience" value="No"> No
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Do you have management experience?</label><br>
+              <input type="radio" name="management_experience" value="Yes"> Yes
+              <input type="radio" name="management_experience" value="No"> No
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Have you owned a business?</label><br>
-                <input type="radio" name="owned_business" value="Yes"> Yes
-                <input type="radio" name="owned_business" value="No"> No
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Have you owned a business?</label><br>
+              <input type="radio" name="owned_business" value="Yes"> Yes
+              <input type="radio" name="owned_business" value="No"> No
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">If the answer is yes, please provide the business details:</label>
-                <textarea class="form-control" name="business_details"></textarea>
-            </div>
+          <div class="mb-3">
+              <label class="form-label">If the answer is yes, please provide the business details:</label>
+              <textarea class="form-control" name="business_details"></textarea>
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Contact Number</label>
-                <input type="tel" class="form-control" name="contact_number">
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Contact Number</label>
+              <input type="tel" class="form-control" name="contact_number">
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Email</label>
-                <input type="email" class="form-control" name="email">
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Email</label>
+              <input type="email" class="form-control" name="email">
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Preferred Destination in Canada</label>
-                <input type="text" class="form-control" name="preferred_destination">
-            </div>
+          <div class="mb-3">
+              <label class="form-label">Preferred Destination in Canada</label>
+              <input type="text" class="form-control" name="preferred_destination">
+          </div>
 
-            <div class="mb-3">
-                <label class="form-label">Date of Birth</label>
-                <input type="date" class="form-control" name="date_of_birth">
-            </div>
-            
+          <div class="mb-3">
+              <label class="form-label">Date of Birth</label>
+              <input type="date" class="form-control" name="date_of_birth">
+          </div>
+          
             <div class="mb-3">
                 <label class="form-label">Where did you hear about us?</label>
                 <select class="form-control" name="referral" required>
@@ -543,6 +623,7 @@
             <button type="submit" class="btn btn-primary">Submit</button>
         </form>
     </div>
+    </div>
     <div id="privacyPopup" class="privacy-popup">
       <div class="privacy-popup-content">
         <h2>Protection of Personal Information</h2>
@@ -555,51 +636,49 @@
       </div>
     </div>
     <footer class="custom-footer" style="background-color: #f8f8f8; color: #333; padding: 2rem; text-align: center; font-size: 0.9rem;">
-        <div class="footer-content" style="display: flex; justify-content: space-between; margin: 0 auto; max-width: 1200px; padding: 0 0px;">
-          <div style="flex: 1; margin: 0 15px; text-align: left;">
-            <h3 style="margin-bottom: 1rem;">ABOUT</h3>
-            Azurverde immigration  Services is a Quebec-based agency helping individuals & families successfully immigrate to, work & visit Canada<br>
-            4388 Saint Denis St Suite 200 #808, Montreal, Quebec H2J 2L1, Canada
-            <a href="https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Licensee/Profile.aspx?ID=10930" target="_blank" rel="noreferrer noopener" style="padding-top:50px; display :block;">
-              <img src="/images/rcic.png" alt="Law Society of Ontario" style="width:160px;height:41px;object-fit:cover">
-            </a>
-          </div>
-      
-          <div style="flex: 1; margin: 0 15px; text-align: left;">
-            <h3 style="margin-bottom: 1rem;">SERVICES</h3>
-            <a href="./spousal-sponsorships.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Spousal Sponsorships</a>
-            <a href="./studypermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Study Permit</a>
-            <a href="./index.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Study Permit Refusals</a>
-            <a href="./visitorvisa.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Visitor Visa</a>
-            <a href="./visitorvisa.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Super Visa</a>
-            <a href="./humanitarianandcompassionate.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">H&C Application</a>
-            <a href="" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Judicial Review</a>
-            <a href="./workpermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Work Permit</a>
-            <a href="./expressentry.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Express Entry</a>
-          </div>
-      
-          <div style="flex: 1; margin: 0 15px; text-align: left;">
-            <h3 style="margin-bottom: 1rem;">KEEP IN TOUCH</h3>
-            <div style="display: flex; gap: 1rem; margin-top: 1rem;">
-              <a href="https://web.facebook.com/profile.php?id=61558892361459&mibextid=wwXIfr&rdid=BXeW1GmrbuYU9ncO&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F12G2EEp6x1n%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
-              <img src="./images/facebook-logosmall.png" alt="Facebook" style="width:40px;height:40px;object-fit:cover">
-              </a>
-              <a href="https://www.instagram.com/christopherr_benderimmigration/?utm_source=qr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
-                <img src="https://static.wixstatic.com/media/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png" alt="Instagram" style="width:40px;height:40px;object-fit:cover">
-              </a>
-              <a href="" target="_self" rel="noreferrer noopener" style="display: inline-block;">
-              <img src="./images/mail.png" alt="Email" style="width:40px;height:40px;object-fit:cover">
-              </a>
-              <a href="" target="_self" rel="noreferrer noopener" style="display: inline-block;">
-                <img src="https://static.wixstatic.com/media/11062b_6fc54c8957474101ba6e80b01907ae50~mv2.png/v1/fill/w_39,h_39,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_6fc54c8957474101ba6e80b01907ae50~mv2.png" alt="YouTube" style="width:40px;height:40px;object-fit:cover">
-              </a>
-            </div>
-    
-          <a href="mailto:info@azurverdeimmigrationservices.com" style="color: #333; text-decoration: none; display: block; font-size: 1rem; margin-bottom: 5rem; margin-top:30px">info@azurverdeimmigrationservices.com</a>
-          </div>
+      <div class="footer-content">
+        <div style="flex: 1; margin: 0 15px; text-align: left;">
+          <h3 style="margin-bottom: 1rem;">ABOUT</h3>
+          Azurverde immigration  Services is a Quebec-based agency helping individuals & families successfully immigrate to, work & visit Canada<br>
+          4388 Saint Denis St Suite 200 #808, Montreal, Quebec H2J 2L1, Canada
+          <a href="https://register.college-ic.ca/Public-Register-EN/Public-Register-EN/Licensee/Profile.aspx?ID=10930" target="_blank" rel="noreferrer noopener" style="padding-top: 2rem; display: block;">
+            <img src="images/rcic.png" alt="Law Society of Ontario" style="width:160px;height:41px;object-fit:cover">
+          </a>
         </div>
-        <p style="margin-bottom: -20px;"> © Copyright Azurverde immigration  Consulting 2024. All Rights Reserved</p>
-      </footer>
+    
+        <div style="flex: 1; margin: 0 15px; text-align: left;">
+          <h3 style="margin-bottom: 1rem;">SERVICES</h3>
+          <a href="./spousal-sponsorships.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Spousal Sponsorships</a>
+          <a href="./studypermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Study Permit</a>
+          <a href="./index.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Study Permit Refusals</a>
+          <a href="./visitorvisa.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Visitor Visa</a>
+          <a href="./visitorvisa.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Super Visa</a>
+          <a href="./humanitarianandcompassionate.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">H&C Application</a>
+          <a href="" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Judicial Review</a>
+          <a href="./workpermits.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Work Permit</a>
+          <a href="./expressentry.html" style="color: #333; text-decoration: none; display: block; margin-bottom: 0.5rem;">Express Entry</a>
+        </div>
+    
+        <div style="flex: 1; margin: 0 15px; text-align: left;">
+          <h3 style="margin-bottom: 1rem;">KEEP IN TOUCH</h3>
+          <div style="display: flex; gap: 1rem; margin-top: 1rem;">
+            <a href="https://web.facebook.com/profile.php?id=61558892361459&mibextid=wwXIfr&rdid=BXeW1GmrbuYU9ncO&share_url=https%3A%2F%2Fweb.facebook.com%2Fshare%2F12G2EEp6x1n%2F%3Fmibextid%3DwwXIfr%26_rdc%3D1%26_rdr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
+              <img src="./images/facebook-logosmall.png" alt="Facebook" style="width:40px;height:40px;object-fit:cover">
+            </a>
+            <a href="https://www.instagram.com/christopherr_benderimmigration/?utm_source=qr#" target="_blank" rel="noreferrer noopener" style="display: inline-block;">
+              <img src="https://static.wixstatic.com/media/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png/v1/fill/w_41,h_41,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_084cbbff6ae446c1b03dc3637193e77a~mv2.png" alt="Instagram" style="width:40px;height:40px;object-fit:cover">
+            </a>
+            <a href="mailto:info@azurverdeimmigrationservices.com" target="_self" rel="noreferrer noopener" style="display: inline-block;">
+              <img src="./images/mail.png" alt="Email" style="width:40px;height:40px;object-fit:cover">
+            </a>
+  
+          </div>
+  
+          <a href="mailto:info@azurverdeimmigrationservices.com" style="color: #333; text-decoration: none; display: block; font-size: 1rem; margin-bottom: 5rem; margin-top:30px">info@azurverdeimmigrationservices.com</a>
+        </div>
+      </div>
+      <p style="margin-bottom: -20px;"> © Copyright Azurverde immigration  Consulting 2024. All Rights Reserved</p>
+    </footer>
         </div>
         <!-- End container -->
       </footer>
