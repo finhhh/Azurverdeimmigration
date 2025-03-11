@@ -67,7 +67,57 @@
   <!-- RESPONSIVE CSS -->
   <link href="css/responsive.css" rel="stylesheet" />
 </head>
+<style>
+  .formsbody{
+    padding:2rem 10rem 2rem 10rem;
+  }
+  @media (max-width: 1024px) {
+    .container {
+      padding: 2rem 5rem;
+    }
+  }
+    @media (max-width: 767px) {
+    .container{
+     padding:2rem 30px 2rem 30px;
+    }
+  }
+  .privacy-popup {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.4);
+}
 
+.privacy-popup-content {
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+  max-width: 600px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+
+@media (max-width: 768px) {
+  .privacy-popup-content {
+    margin: 30% auto;
+    width: 90%;
+    padding: 15px;
+  }
+}
+
+#okButton {
+  display: block;
+  margin: 20px auto 0;
+  padding: 8px 30px;
+}
+</style>
 <body>
   <!-- PRELOADER SPINNER
 		============================================= -->
@@ -389,9 +439,10 @@ Montreal, Quebec H2J 2L1, Canada</span>
 
             <!-- CONTACT FORM -->
             <div>
-              <div class="container mt-2 mb-5" style="padding: 2rem 10rem 2rem 10rem; background-color: #f8f8f8; border-radius: 30px;">
+              <div class=" formsbody container mt-2 mb-5" style=" background-color: #f8f8f8; border-radius: 30px;">
                 <h2 class="text-center">Canada Immigration Assessment Form</h2>
-                <form>
+                <form   action="https://formspree.io/f/mjkgnlkg"
+                method="POST">
                     <div class="mb-3">
                         <label class="form-label">Name</label>
                         <input type="text" class="form-control" name="name" required>
@@ -453,7 +504,65 @@ Montreal, Quebec H2J 2L1, Canada</span>
                         <input type="radio" name="inadmissibility" value="Yes"> Yes
                         <input type="radio" name="inadmissibility" value="No"> No
                     </div>
-                    
+                    <div class="mb-3">
+                      <label class="form-label">Do you have any family members or relatives living in Canada and who are 18 years or older?</label><br>
+                      <input type="radio" name="family_in_canada" value="Yes"> Yes
+                      <input type="radio" name="family_in_canada" value="No"> No
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Your Personal Net Worth</label>
+                      <input type="text" class="form-control" name="net_worth">
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">You may provide additional information that you think would be relevant to your immigration assessment. Would you like to add information at this time?</label>
+                      <textarea class="form-control" name="additional_info"></textarea>
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Did you own and manage any other business(es) during the last five years?</label><br>
+                      <input type="radio" name="business_ownership" value="Yes"> Yes
+                      <input type="radio" name="business_ownership" value="No"> No
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Do you have management experience?</label><br>
+                      <input type="radio" name="management_experience" value="Yes"> Yes
+                      <input type="radio" name="management_experience" value="No"> No
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Have you owned a business?</label><br>
+                      <input type="radio" name="owned_business" value="Yes"> Yes
+                      <input type="radio" name="owned_business" value="No"> No
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">If the answer is yes, please provide the business details:</label>
+                      <textarea class="form-control" name="business_details"></textarea>
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Contact Number</label>
+                      <input type="tel" class="form-control" name="contact_number">
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Email</label>
+                      <input type="email" class="form-control" name="email">
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Preferred Destination in Canada</label>
+                      <input type="text" class="form-control" name="preferred_destination">
+                  </div>
+      
+                  <div class="mb-3">
+                      <label class="form-label">Date of Birth</label>
+                      <input type="date" class="form-control" name="date_of_birth">
+                  </div>
+                  
                     <div class="mb-3">
                         <label class="form-label">Where did you hear about us?</label>
                         <select class="form-control" name="referral" required>
@@ -575,6 +684,17 @@ Montreal, Quebec H2J 2L1, Canada</span>
     </div>
     <!-- INNER PAGE WRAPPER -->
   </div>
+  <div id="privacyPopup" class="privacy-popup">
+    <div class="privacy-popup-content">
+      <h2>Protection of Personal Information</h2>
+      <p>The personal information appearing on this form, and in any documents that must be appended to it, is required for processing
+      your application for Immigration to Canada or for a selection certificate and the application of the Act respecting immigration to
+      Québec, the Regulation respecting the selection of foreign nationals, the Regulation respecting the immigration consultants and
+      their administrative regulations.</p>
+      <p>Your personal information is confidential and may not be disclosed without your consent unless explicitly authorized by you.</p>
+      <button id="okButton" class="btn btn-primary">OK</button>
+    </div>
+  </div>
   <!-- END PAGE CONTENT -->
 
   <!-- EXTERNAL SCRIPTS
@@ -611,7 +731,32 @@ Montreal, Quebec H2J 2L1, Canada</span>
 
   <!-- Google Map -->
   <script src="js/google-map.js"></script>
-
+  <script>
+    document.addEventListener("DOMContentLoaded", function() {
+      const popup = document.getElementById("privacyPopup");
+      const okButton = document.getElementById("okButton");
+      const formInputs = document.querySelectorAll("form input, form textarea, form select");
+      let popupShown = false;
+    
+      // Function to show popup
+      function showPopup() {
+        if (!popupShown) {
+          popup.style.display = "block";
+          popupShown = true;
+        }
+      }
+    
+      // Add event listeners to all form inputs
+      formInputs.forEach(input => {
+        input.addEventListener("focus", showPopup);
+      });
+    
+      // Close popup when OK button is clicked
+      okButton.addEventListener("click", function() {
+        popup.style.display = "none";
+      });
+    });
+    </script>
   <!-- To use this code on your website, get a free API key from Google. Read more at: https://www.w3schools.com/graphics/google_maps_basic.asp -->
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCUQmwdDWm3cQXhPqIO9TsKHq7hrvh2XrU&amp;callback=initMap"
     async defer></script>
