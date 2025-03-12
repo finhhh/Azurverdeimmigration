@@ -1,22 +1,7 @@
 // JavaScript Document
 
 
-	$(window).on('load', function() {
-	
-		"use strict";
-						
-		/*----------------------------------------------------*/
-		/*	Preloader
-		/*----------------------------------------------------*/
-		
-		var preloader = $('#loader-wrapper'),
-			loader = preloader.find('.cssload-box-loading');
-			loader.fadeOut();
-			preloader.delay(400).fadeOut('slow');
-				
-		$(window).stellar({});
-		
-	});
+
 
 
 	$(window).on('scroll', function() {
