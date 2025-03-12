@@ -305,8 +305,7 @@
 }
   </style>
 <style>
-  .contact-section {
-  }
+
   
   
   .divider {
@@ -503,27 +502,28 @@
           <h1 class="contact-heading">Contact Us</h1>
           <p class="contact-subheading">We would like to hear from you about our services so far.</p>
           
-          <form  action="https://formspree.io/f/mjkgnlkg" method="POST">
-              <div class="row">
-                  <div class="col-md-6">
-                      <label for="name" class="form-label">Name</label>
-                      <input type="text" class="form-control" id="name" required>
-                  </div>
-                  <div class="col-md-6">
-                      <label for="text" class="form-label">Email</label>
-                      <input type="text" class="form-control" id="text" required>
-                  </div>
-              </div>
-              
-              <div class="mb-3">
-                  <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control message-area" id="message" required></textarea>
-              </div>
-              
-              <div class="text-center">
-                  <button type="submit" class="btn submit-btn">submit</button>
-              </div>
-          </form>
+          <form action="https://formspree.io/f/mjkgnlkg" method="POST">
+            <div class="row">
+                <div class="col-md-6">
+                    <label for="name" class="form-label">Name</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="col-md-6">
+                    <label for="email" class="form-label">Email</label>
+                    <input type="text" class="form-control" id="email" name="email" required>
+                </div>
+            </div>
+            
+            <div class="mb-3">
+                <label for="message" class="form-label">Message</label>
+                <textarea class="form-control message-area" id="message" name="message" required></textarea>
+            </div>
+            
+            <div class="text-center">
+                <button type="submit" class="btn submit-btn">Submit</button>
+            </div>
+        </form>
+        
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-8 text-center">
