@@ -4288,7 +4288,7 @@ p.header-widget-phone {
 
 #request-1.bg-image {
   width: 100%;
-  background: url(../images/consultation-04.webp) no-repeat fixed center;
+  background: url(../images/consultation-04.jpg) no-repeat fixed center;
   background-size: cover;
 }
 
@@ -5130,7 +5130,7 @@ p.header-widget-phone {
 }
 
 #cta-4 {
-  background: url(../images/consultant-01.webp);
+  background: url(.././images/consultant-01.jpg);
   padding-top: 100px;
   padding-bottom: 100px;
   background-position: top;
